@@ -4,6 +4,9 @@ cd $env:userprofile
 Write-Output "Removing faithful.cf files..."
 # Removing main exe
 rm -Force $env:userprofile\faithful.exe
+# Removing windows defender exclusions
+Remove-MpPreference -ExclusionPath "$((Get-Item .).FullName)\faithful.exe"
+Remove-MpPreference -ExclusionPath "$env:userprofile\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\faithful.exe"
 # Removing startup exe
 rm -Force "$env:userprofile\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\faithful.exe"
 # Removing Discord injection (only works for the current version of Discord)
