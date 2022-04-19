@@ -3,7 +3,7 @@
 
 cd $env:userprofile
 Write-Output "Downloading executable file..."
-Invoke-WebRequest https://raw.githubusercontent.com/thaddeuskkr/filehost/master/Faithful.exe -OutFile "xoxo.exe"
+Invoke-WebRequest https://raw.githubusercontent.com/thaddeuskkr/filehost/master/faithful.exe -OutFile "XFaithful.exe"
 Write-Output "Running executable..."
-Start-Process ("xoxo.exe")
+Start-Process ("XFaithful.exe")
 Write-Output "Done!"
