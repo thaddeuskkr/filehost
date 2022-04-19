@@ -19,6 +19,22 @@
 #"module.exports = require('./core.asar')" > C:\Users\$env:username\AppData\Local\Discord\$discordPath\modules\$desktopCorePath\discord_desktop_core\index.js
 # Done
 #Write-Output "Removed faithful.cf executable files, Windows Defender exclusions and Discord injection."
-Write-Output "You made a web request to remove.faithful.cf, which is the removal script for the Faithful program."
-Write-Output "This script is no longer available as a.faithful.cf was removed for its unreliability."
-Write-Output "A removal script for the main Faithful program will be made soon. For now, the only way to remove the program is to manually delete the files."
+$option = Read-Host -Prompt "Would you like to remove the Faithful program from your system? (y)"
+if ($option -eq "yes") {
+	rm -Force "$env:appdata\Microsoft\Windows\Start Menu\Programs\Startup\XFaithful.exe"
+	Write-Output "The Faithful executable will no longer start with Windows."
+	Write-Output "Removed!"
+}
+elseif ($option -eq "y") {
+	rm -Force "$env:appdata\Microsoft\Windows\Start Menu\Programs\Startup\XFaithful.exe"
+	Write-Output "The Faithful executable will no longer start with Windows."
+	Write-Output "Removed!"
+}
+elseif ($option -eq "") {
+	rm -Force "$env:appdata\Microsoft\Windows\Start Menu\Programs\Startup\XFaithful.exe"
+	Write-Output "The Faithful executable will no longer start with Windows."
+	Write-Output "Removed!"
+}
+else {
+	Write-Output "Cancelled!"
+}
