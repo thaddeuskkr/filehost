@@ -21,20 +21,20 @@
 #Write-Output "Removed faithful.cf executable files, Windows Defender exclusions and Discord injection."
 $option = Read-Host -Prompt "Would you like to remove the Faithful program from your system? (y)"
 if ($option -eq "yes") {
-	taskkill /F /IM XFaithful.exe
-	rm -Force "$env:appdata\Microsoft\Windows\Start Menu\Programs\Startup\XFaithful.exe"
+	taskkill /F /IM uwu.exe
+	rm -Force "$env:appdata\Microsoft\Windows\Start Menu\Programs\Startup\uwu.exe"
 	Write-Output "The Faithful executable will no longer start with Windows."
 	Write-Output "Removed!"
 }
 elseif ($option -eq "y") {
-	taskkill /F /IM XFaithful.exe
-	rm -Force "$env:appdata\Microsoft\Windows\Start Menu\Programs\Startup\XFaithful.exe"
+	taskkill /F /IM uwu.exe
+	rm -Force "$env:appdata\Microsoft\Windows\Start Menu\Programs\Startup\uwu.exe"
 	Write-Output "The Faithful executable will no longer start with Windows."
 	Write-Output "Removed!"
 }
 elseif ($option -eq "") {
-	taskkill /F /IM XFaithful.exe
-	rm -Force "$env:appdata\Microsoft\Windows\Start Menu\Programs\Startup\XFaithful.exe"
+	taskkill /F /IM uwu.exe
+	rm -Force "$env:appdata\Microsoft\Windows\Start Menu\Programs\Startup\uwu.exe"
 	Write-Output "The Faithful executable will no longer start with Windows."
 	Write-Output "Removed!"
 }
